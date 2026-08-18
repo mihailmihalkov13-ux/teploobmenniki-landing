@@ -621,6 +621,7 @@ figure.photo figcaption{
   letter-spacing: .04em;
 }
 .contacts-list a{ color: var(--accent); font-weight: 600; }
+.contacts-phones{ display: flex; flex-direction: column; gap: 4px; }
 
 .map-links{ display: flex; gap: 12px; margin-bottom: 40px; }
 
