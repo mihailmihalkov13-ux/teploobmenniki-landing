@@ -62,7 +62,7 @@ p{ color: var(--text-muted); }
 
 .section-eyebrow{
   text-transform: uppercase;
-  letter-spacing: .12em;
+  letter-spacing: .1em;
   font-size: 13px;
   font-weight: 700;
   color: var(--accent);
@@ -175,7 +175,7 @@ p{ color: var(--text-muted); }
 
 .header-phone{ display: flex; flex-direction: column; text-align: right; }
 .phone-number{ font-weight: 700; font-size: 15px; color: var(--dark); }
-.phone-caption{ font-size: 11px; color: var(--text-muted); }
+.phone-caption{ font-size: 12px; color: var(--text-muted); }
 
 .burger{
   display: none;
@@ -332,7 +332,7 @@ figure.photo figcaption{
   padding: 5px 12px;
   border-radius: 20px;
   font-size: 11px;
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .04em;
   color: var(--white);
@@ -506,15 +506,16 @@ figure.photo figcaption{
   background: var(--dark);
   color: var(--white);
   text-transform: uppercase;
+  font-weight: 700;
   font-size: 12px;
-  letter-spacing: .06em;
+  letter-spacing: .04em;
 }
 .price-table tbody tr:nth-child(odd){ background: var(--bg-gray); }
 .price-table td:last-child{ text-align: right; color: var(--accent-dark); }
 .price-table td strong{ color: var(--accent-dark); }
 .price-note{
   text-align: center;
-  font-size: 13px;
+  font-size: 12px;
   color: var(--text-muted);
   margin-top: 18px;
 }
@@ -611,9 +612,10 @@ figure.photo figcaption{
   gap: 14px;
   margin: 24px 0 30px;
 }
-.contacts-list li{ display: flex; gap: 14px; align-items: baseline; font-size: 15px; }
+.contacts-list li{ display: flex; gap: 14px; align-items: flex-start; font-size: 15px; }
 .contacts-label{
   min-width: 130px;
+  padding-top: 2px;
   font-weight: 700;
   color: var(--dark);
   font-size: 13px;
