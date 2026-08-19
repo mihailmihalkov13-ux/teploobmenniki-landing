@@ -66,18 +66,38 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', () => { index = 0; update(); });
   }
 
-  // ---------- Формы: отправка заявки на бэкенд ----------
+  // ---------- Формы: валидация и отправка заявки на бэкенд ----------
   const forms = [document.getElementById('contactForm'), document.getElementById('modalForm')];
   forms.forEach(form => {
     if (!form) return;
+    const phoneInput = form.elements.phone;
+    const consentInput = form.querySelector('.consent input[type="checkbox"]');
+
+    const validatePhone = () => {
+      if (!phoneInput) return;
+      const digits = (phoneInput.value.match(/\d/g) || []).length;
+      phoneInput.setCustomValidity(digits >= 10 ? '' : 'Введите корректный номер телефона (минимум 10 цифр)');
+    };
+    const validateConsent = () => {
+      if (!consentInput) return;
+      consentInput.setCustomValidity(consentInput.checked ? '' : 'Чтобы продолжить, дайте согласие на обработку персональных данных');
+    };
+
+    phoneInput?.addEventListener('input', validatePhone);
+    consentInput?.addEventListener('change', validateConsent);
+
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
+      validatePhone();
+      validateConsent();
+      if (!form.reportValidity()) return;
+
       const submitBtn = form.querySelector('button[type="submit"]');
       const payload = {
         name: form.elements.name?.value || '',
-        phone: form.elements.phone?.value || '',
+        phone: phoneInput?.value || '',
         message: form.elements.message?.value || '',
-        consent: form.querySelector('.consent input[type="checkbox"]')?.checked || false
+        consent: consentInput?.checked || false
       };
 
       if (submitBtn) submitBtn.disabled = true;
