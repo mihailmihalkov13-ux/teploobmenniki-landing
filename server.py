@@ -3,6 +3,7 @@ import smtplib
 import re
 from pathlib import Path
 from email.message import EmailMessage
+from email.utils import formatdate, make_msgid
 
 from flask import Flask, request, jsonify, send_from_directory
 from dotenv import load_dotenv
@@ -63,6 +64,8 @@ def submit_lead():
     email_msg["From"] = SMTP_USER
     email_msg["To"] = LEAD_EMAIL_TO
     email_msg["Reply-To"] = SMTP_USER
+    email_msg["Date"] = formatdate(localtime=True)
+    email_msg["Message-ID"] = make_msgid(domain=SMTP_USER.split("@")[-1])
     email_msg.set_content("\n".join(body_lines))
 
     try:
