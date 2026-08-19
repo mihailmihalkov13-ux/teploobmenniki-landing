@@ -395,7 +395,7 @@ figure.photo figcaption{
 /* ---------- Brands ---------- */
 .brands-grid{
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 16px;
   margin-top: 8px;
 }
@@ -722,7 +722,7 @@ figure.photo figcaption{
   .hero-media{ order: -1; }
   .about-grid{ grid-template-columns: 1fr; }
   .services-grid{ grid-template-columns: repeat(2, 1fr); }
-  .brands-grid{ grid-template-columns: repeat(3, 1fr); }
+  .brands-grid{ grid-template-columns: repeat(4, 1fr); }
   .gallery-grid{ grid-template-columns: repeat(2, 1fr); }
   .adv-grid{ grid-template-columns: repeat(2, 1fr); }
   .reviews-track{ grid-template-columns: 1fr; }
