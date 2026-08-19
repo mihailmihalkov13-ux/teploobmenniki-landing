@@ -32,9 +32,12 @@ def submit_lead():
     name = (data.get("name") or "").strip()
     phone = (data.get("phone") or "").strip()
     message = (data.get("message") or "").strip()
+    consent = data.get("consent")
 
     if not name or not phone:
         return jsonify({"ok": False, "error": "Укажите имя и телефон"}), 400
+    if consent not in (True, "true", "on", "1", 1):
+        return jsonify({"ok": False, "error": "Нужно согласие на обработку персональных данных"}), 400
     if len(name) > 200 or len(message) > 2000:
         return jsonify({"ok": False, "error": "Слишком длинное значение"}), 400
     if not PHONE_RE.match(phone):

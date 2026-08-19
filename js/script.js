@@ -76,7 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const payload = {
         name: form.elements.name?.value || '',
         phone: form.elements.phone?.value || '',
-        message: form.elements.message?.value || ''
+        message: form.elements.message?.value || '',
+        consent: form.querySelector('.consent input[type="checkbox"]')?.checked || false
       };
 
       if (submitBtn) submitBtn.disabled = true;
