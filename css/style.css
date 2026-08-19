@@ -382,12 +382,7 @@ figure.photo figcaption{
   transition: box-shadow .2s ease, transform .2s ease;
 }
 .service-card:hover{ box-shadow: var(--shadow); transform: translateY(-3px); }
-.service-num{
-  font-size: 14px;
-  font-weight: 800;
-  color: var(--accent);
-  margin-bottom: 12px;
-}
+.service-card h3{ margin-top: 4px; }
 .service-card p{ font-size: 14px; }
 
 .services-cta{ text-align: center; margin-top: 44px; }
