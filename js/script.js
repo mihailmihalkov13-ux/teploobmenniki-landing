@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         form.reset();
         alert('Спасибо! Заявка отправлена, мы свяжемся с вами в ближайшее время.');
-        closeModal();
+        if (form.id === 'modalForm') closeModal();
       } catch (err) {
         alert('Не удалось отправить заявку. Попробуйте ещё раз или позвоните нам напрямую.');
       } finally {

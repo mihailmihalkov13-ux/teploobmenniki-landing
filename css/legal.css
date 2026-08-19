@@ -1,0 +1,54 @@
+/* ---------- Юридические страницы (политика, оферта) ---------- */
+.legal-container{
+  max-width: 820px;
+}
+
+.legal-title{
+  font-size: 34px;
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+
+.legal-updated{
+  color: var(--text-muted);
+  font-size: 13px;
+  margin-bottom: 36px;
+}
+
+.legal-page h2{
+  font-size: 21px;
+  margin-top: 36px;
+  margin-bottom: 12px;
+}
+
+.legal-page p{
+  color: var(--text);
+  font-size: 15px;
+  margin-bottom: 14px;
+}
+
+.legal-list{
+  list-style: disc;
+  padding-left: 22px;
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.legal-list li{
+  color: var(--text);
+  font-size: 15px;
+}
+
+.legal-contacts{
+  list-style: none;
+  padding-left: 0;
+  background: var(--bg-gray);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+}
+.legal-contacts a{ color: var(--accent); font-weight: 600; }
+
+@media (max-width: 768px){
+  .legal-title{ font-size: 26px; }
+}

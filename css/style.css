@@ -187,7 +187,15 @@ p{ color: var(--text-muted); }
   border: none;
   cursor: pointer;
 }
-.burger span{ height: 2px; background: var(--dark); border-radius: 2px; }
+.burger span{
+  height: 2px;
+  background: var(--dark);
+  border-radius: 2px;
+  transition: transform .2s ease, opacity .2s ease;
+}
+.burger.active span:nth-child(1){ transform: translateY(7px) rotate(45deg); }
+.burger.active span:nth-child(2){ opacity: 0; }
+.burger.active span:nth-child(3){ transform: translateY(-7px) rotate(-45deg); }
 
 /* ---------- Hero ---------- */
 .hero{
@@ -478,10 +486,11 @@ figure.photo figcaption{
   display: flex; align-items: center; justify-content: center;
   background: var(--white);
   border-radius: var(--radius-sm);
-  font-size: 22px;
+  color: var(--accent);
   margin-bottom: 16px;
   box-shadow: var(--shadow);
 }
+.adv-icon svg{ width: 24px; height: 24px; }
 .adv-card p{ font-size: 14px; }
 
 /* ---------- Reviews ---------- */
@@ -610,6 +619,7 @@ figure.photo figcaption{
   color: var(--text-muted);
 }
 .consent input{ margin-top: 3px; width: auto; }
+.consent a{ color: var(--accent); text-decoration: underline; }
 
 /* ---------- Footer ---------- */
 .site-footer{ background: var(--dark); color: #cfd2d9; padding-top: 56px; }
