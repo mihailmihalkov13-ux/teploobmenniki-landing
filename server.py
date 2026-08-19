@@ -1,12 +1,14 @@
 import os
 import smtplib
 import re
+from pathlib import Path
 from email.message import EmailMessage
 
 from flask import Flask, request, jsonify, send_from_directory
 from dotenv import load_dotenv
 
-load_dotenv()
+BASE_DIR = Path(__file__).resolve().parent
+load_dotenv(BASE_DIR / ".env")
 
 SMTP_HOST = os.environ.get("SMTP_HOST", "smtp.yandex.ru")
 SMTP_PORT = int(os.environ.get("SMTP_PORT", "465"))
@@ -17,12 +19,12 @@ PORT = int(os.environ.get("PORT", "5000"))
 
 PHONE_RE = re.compile(r"^[\d\s()+\-]{5,20}$")
 
-app = Flask(__name__, static_folder=".", static_url_path="")
+app = Flask(__name__, static_folder=str(BASE_DIR), static_url_path="")
 
 
 @app.route("/")
 def index():
-    return send_from_directory(".", "index.html")
+    return send_from_directory(BASE_DIR, "index.html")
 
 
 @app.route("/api/lead", methods=["POST"])
