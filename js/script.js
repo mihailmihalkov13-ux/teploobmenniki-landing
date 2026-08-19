@@ -66,16 +66,36 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', () => { index = 0; update(); });
   }
 
-  // ---------- Формы (заглушка отправки) ----------
+  // ---------- Формы: отправка заявки на бэкенд ----------
   const forms = [document.getElementById('contactForm'), document.getElementById('modalForm')];
   forms.forEach(form => {
     if (!form) return;
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      // TODO: подключить реальную отправку (email/CRM/бэкенд)
-      form.reset();
-      alert('Спасибо! Заявка отправлена, мы свяжемся с вами в ближайшее время.');
-      closeModal();
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const payload = {
+        name: form.elements.name?.value || '',
+        phone: form.elements.phone?.value || '',
+        message: form.elements.message?.value || ''
+      };
+
+      if (submitBtn) submitBtn.disabled = true;
+      try {
+        const res = await fetch('/api/lead', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        if (!res.ok) throw new Error('request failed');
+
+        form.reset();
+        alert('Спасибо! Заявка отправлена, мы свяжемся с вами в ближайшее время.');
+        closeModal();
+      } catch (err) {
+        alert('Не удалось отправить заявку. Попробуйте ещё раз или позвоните нам напрямую.');
+      } finally {
+        if (submitBtn) submitBtn.disabled = false;
+      }
     });
   });
 
