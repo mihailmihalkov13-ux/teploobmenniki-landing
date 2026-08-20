@@ -453,17 +453,17 @@ figure.photo figcaption{
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
-  padding: 18px 16px;
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 128px;
+  min-height: 168px;
   transition: box-shadow .2s ease, transform .2s ease;
 }
 .brand-chip:hover{ box-shadow: var(--shadow); transform: translateY(-2px); }
 .brand-chip img{
   max-width: 100%;
-  max-height: 76px;
+  max-height: 118px;
   width: auto;
   object-fit: contain;
 }
