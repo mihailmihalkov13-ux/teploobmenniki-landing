@@ -30,7 +30,8 @@ body{
   font-family: 'Mulish', Arial, sans-serif;
   color: var(--text);
   background: var(--white);
-  line-height: 1.55;
+  font-size: 17px;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -51,11 +52,11 @@ h1, h2, h3, h4{
   line-height: 1.2;
 }
 
-h1{ font-size: 46px; }
-h2{ font-size: 32px; margin-bottom: 16px; }
-h3{ font-size: 20px; margin-bottom: 8px; }
+h1{ font-size: 50px; }
+h2{ font-size: 36px; margin-bottom: 16px; }
+h3{ font-size: 22px; margin-bottom: 8px; }
 
-p{ color: var(--text-muted); }
+p{ color: var(--text-muted); font-weight: 500; }
 
 .center{ text-align: center; margin-left: auto; margin-right: auto; }
 
@@ -65,16 +66,16 @@ p{ color: var(--text-muted); }
 .section-eyebrow{
   text-transform: uppercase;
   letter-spacing: .1em;
-  font-size: 13px;
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: 800;
   color: var(--accent);
   margin-bottom: 10px;
 }
 
 .section-lead{
-  max-width: 640px;
+  max-width: 680px;
   margin: 0 auto 40px;
-  font-size: 17px;
+  font-size: 19px;
 }
 
 /* ---------- Buttons ---------- */
@@ -86,7 +87,7 @@ p{ color: var(--text-muted); }
   padding: 14px 28px;
   font-family: inherit;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 15px;
   text-transform: uppercase;
   letter-spacing: .04em;
   border: 2px solid transparent;
@@ -116,7 +117,7 @@ p{ color: var(--text-muted); }
 }
 .btn-white:hover{ background: var(--bg-gray); }
 
-.btn-lg{ padding: 17px 34px; font-size: 15px; }
+.btn-lg{ padding: 18px 36px; font-size: 16px; }
 .btn-block{ width: 100%; }
 
 /* ---------- Header ---------- */
@@ -154,8 +155,8 @@ p{ color: var(--text-muted); }
 }
 
 .logo-text{ display: flex; flex-direction: column; line-height: 1.2; }
-.logo-text strong{ font-size: 17px; color: var(--white); }
-.logo-text small{ font-size: 12px; color: rgba(255,255,255,.8); }
+.logo-text strong{ font-size: 18px; color: var(--white); }
+.logo-text small{ font-size: 13px; font-weight: 600; color: rgba(255,255,255,.85); }
 
 .main-nav{
   display: flex;
@@ -164,8 +165,8 @@ p{ color: var(--text-muted); }
   justify-content: space-evenly;
 }
 .main-nav a{
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 700;
   color: rgba(255,255,255,.85);
   padding: 8px 0;
   border-bottom: 2px solid transparent;
@@ -177,8 +178,8 @@ p{ color: var(--text-muted); }
 .header-actions{ display: flex; align-items: center; gap: 20px; flex-shrink: 0; }
 
 .header-phone{ display: flex; flex-direction: column; text-align: right; white-space: nowrap; }
-.phone-number{ font-weight: 700; font-size: 16px; color: var(--white); white-space: nowrap; }
-.phone-caption{ font-size: 12px; color: rgba(255,255,255,.8); white-space: nowrap; }
+.phone-number{ font-weight: 800; font-size: 18px; color: var(--white); white-space: nowrap; }
+.phone-caption{ font-size: 13px; font-weight: 600; color: rgba(255,255,255,.85); white-space: nowrap; }
 
 .header-actions .btn-primary{
   background: var(--white);
@@ -261,8 +262,8 @@ p{ color: var(--text-muted); }
 
 .eyebrow{
   text-transform: uppercase;
-  font-size: 13px;
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: 800;
   letter-spacing: .1em;
   color: #8fb8f5;
   margin-bottom: 16px;
@@ -271,7 +272,8 @@ p{ color: var(--text-muted); }
 .hero h1{ color: var(--white); }
 
 .hero-lead{
-  font-size: 19px;
+  font-size: 20px;
+  font-weight: 500;
   margin: 20px 0 26px;
   max-width: 600px;
   color: #d3dbea;
@@ -288,8 +290,8 @@ p{ color: var(--text-muted); }
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 700;
   color: var(--white);
 }
 .check{
@@ -350,8 +352,8 @@ figure.photo figcaption{
   padding: 24px 16px 12px;
   background: linear-gradient(180deg, transparent, rgba(15,18,26,.75));
   color: var(--white);
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 
@@ -367,14 +369,15 @@ figure.photo figcaption{
 .stat{ text-align: center; color: var(--white); }
 .stat-num{
   display: block;
-  font-size: 30px;
+  font-size: 34px;
   font-weight: 800;
   color: var(--white);
 }
 .stat-label{
   display: block;
-  font-size: 13px;
-  color: #b7bcc6;
+  font-size: 14px;
+  font-weight: 600;
+  color: #c3c8d1;
   margin-top: 4px;
 }
 
@@ -389,7 +392,7 @@ figure.photo figcaption{
 .mini-title{
   margin-top: 28px;
   margin-bottom: 14px;
-  font-size: 17px;
+  font-size: 19px;
 }
 
 .checklist{
@@ -401,7 +404,7 @@ figure.photo figcaption{
 .checklist li{
   position: relative;
   padding-left: 26px;
-  font-size: 15px;
+  font-size: 16px;
   color: var(--text);
   font-weight: 600;
 }
@@ -435,7 +438,7 @@ figure.photo figcaption{
 }
 .service-card:hover{ box-shadow: var(--shadow); transform: translateY(-3px); }
 .service-card h3{ margin-top: 4px; }
-.service-card p{ font-size: 14px; }
+.service-card p{ font-size: 15px; }
 
 .services-cta{ text-align: center; margin-top: 44px; }
 
@@ -501,24 +504,27 @@ figure.photo figcaption{
   border-collapse: collapse;
 }
 .price-table th, .price-table td{
-  padding: 18px 28px;
+  padding: 26px 34px;
   text-align: left;
-  font-size: 15px;
+  font-size: 18px;
+  font-weight: 600;
 }
 .price-table thead th{
   background: var(--dark);
   color: var(--white);
   text-transform: uppercase;
-  font-weight: 700;
-  font-size: 12px;
+  font-weight: 800;
+  font-size: 15px;
   letter-spacing: .04em;
+  padding: 22px 34px;
 }
 .price-table tbody tr:nth-child(odd){ background: var(--bg-gray); }
-.price-table td:last-child{ text-align: right; color: var(--accent-dark); }
-.price-table td strong{ color: var(--accent-dark); }
+.price-table td:last-child{ text-align: right; color: var(--accent-dark); font-weight: 700; }
+.price-table td strong{ color: var(--accent-dark); font-size: 20px; font-weight: 800; }
 .price-note{
   text-align: center;
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: 600;
   color: var(--text-muted);
   margin-top: 18px;
 }
@@ -546,7 +552,7 @@ figure.photo figcaption{
   box-shadow: var(--shadow);
 }
 .adv-icon svg{ width: 24px; height: 24px; }
-.adv-card p{ font-size: 14px; }
+.adv-card p{ font-size: 15px; }
 
 /* ---------- Reviews ---------- */
 .reviews-track{
@@ -600,8 +606,8 @@ figure.photo figcaption{
   padding: 52px 24px;
   flex-wrap: wrap;
 }
-.cta-strip h2{ color: var(--white); margin-bottom: 6px; font-size: 26px; }
-.cta-strip p{ color: #dbe8fb; }
+.cta-strip h2{ color: var(--white); margin-bottom: 6px; font-size: 28px; }
+.cta-strip p{ color: #dbe8fb; font-size: 17px; font-weight: 500; }
 
 /* ---------- Contacts ---------- */
 .contacts-grid{
@@ -616,17 +622,18 @@ figure.photo figcaption{
   gap: 14px;
   margin: 24px 0 30px;
 }
-.contacts-list li{ display: flex; gap: 14px; align-items: flex-start; font-size: 15px; }
+.contacts-list li{ display: flex; gap: 14px; align-items: flex-start; font-size: 16px; font-weight: 600; }
+.contacts-list li > *:last-child{ min-width: 0; }
 .contacts-label{
   min-width: 130px;
   padding-top: 2px;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--dark);
-  font-size: 13px;
+  font-size: 14px;
   text-transform: uppercase;
   letter-spacing: .04em;
 }
-.contacts-list a{ color: var(--accent); font-weight: 600; }
+.contacts-list a{ color: var(--accent); font-weight: 700; overflow-wrap: anywhere; }
 .contacts-phones{ display: flex; flex-direction: column; gap: 4px; }
 
 .map-embed{
@@ -654,11 +661,12 @@ figure.photo figcaption{
 .contact-form textarea,
 .modal form input:not([type="checkbox"]){
   width: 100%;
-  padding: 13px 16px;
+  padding: 14px 16px;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   font-family: inherit;
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: 500;
   background: var(--white);
 }
 .contact-form input:not([type="checkbox"]):focus,
@@ -671,7 +679,8 @@ figure.photo figcaption{
   display: flex;
   align-items: flex-start;
   gap: 8px;
-  font-size: 12px;
+  font-size: 13px;
+  font-weight: 500;
   color: var(--text-muted);
 }
 .consent input{ margin-top: 3px; width: auto; }
@@ -687,22 +696,23 @@ figure.photo figcaption{
   border-bottom: 1px solid #333640;
 }
 .footer-brand{ display: flex; gap: 12px; align-items: flex-start; }
-.footer-brand strong{ color: var(--white); font-size: 15px; }
-.footer-brand p{ font-size: 13px; color: #9a9ea8; margin-top: 4px; }
+.footer-brand strong{ color: var(--white); font-size: 16px; }
+.footer-brand p{ font-size: 14px; font-weight: 500; color: #9a9ea8; margin-top: 4px; }
 
 .footer-nav{ display: flex; flex-direction: column; gap: 10px; }
-.footer-nav a{ font-size: 14px; color: #cfd2d9; }
+.footer-nav a{ font-size: 15px; font-weight: 600; color: #cfd2d9; }
 .footer-nav a:hover{ color: var(--white); }
 
-.footer-contacts{ display: flex; flex-direction: column; gap: 10px; font-size: 14px; }
+.footer-contacts{ display: flex; flex-direction: column; gap: 10px; font-size: 15px; font-weight: 600; }
 .footer-contacts a:hover{ color: var(--white); }
-.footer-contacts span{ color: #9a9ea8; font-size: 12px; }
+.footer-contacts span{ color: #9a9ea8; font-size: 13px; font-weight: 500; }
 
 .footer-bottom{
   display: flex;
   justify-content: space-between;
   padding: 20px 24px;
-  font-size: 12px;
+  font-size: 13px;
+  font-weight: 500;
   color: #7d8089;
   flex-wrap: wrap;
   gap: 10px;
@@ -738,7 +748,7 @@ figure.photo figcaption{
 .modal-overlay.open .modal{ transform: translateY(0); }
 
 .modal h3{ margin-bottom: 8px; }
-.modal p{ font-size: 14px; margin-bottom: 20px; }
+.modal p{ font-size: 15px; margin-bottom: 20px; }
 .modal form{ display: flex; flex-direction: column; gap: 14px; }
 
 .modal-close{
@@ -828,7 +838,7 @@ figure.photo figcaption{
     font-size: 14px;
   }
   .header-actions{ gap: 8px; flex-shrink: 0; }
-  .header-actions .btn{ padding: 9px 12px; font-size: 10px; }
+  .header-actions .btn{ padding: 10px 14px; font-size: 11px; }
   .checklist.two-col{ grid-template-columns: minmax(0,1fr); }
   .services-grid{ grid-template-columns: minmax(0,1fr); }
   .brands-grid{ grid-template-columns: repeat(2, minmax(0,1fr)); }
@@ -840,7 +850,7 @@ figure.photo figcaption{
   .mobile-call-btn{ display: flex; }
   h1{ font-size: 30px; }
   .hero h1{ font-size: 30px; }
-  h2{ font-size: 26px; }
+  h2{ font-size: 28px; }
   .section{ padding: 60px 0; }
 
   /* Длинные надписи на кнопках переносятся, а не вылезают за экран */
@@ -852,4 +862,7 @@ figure.photo figcaption{
   .map-links .btn{ width: 100%; }
   .cert-thumbs{ grid-template-columns: repeat(2, minmax(0,1fr)); }
   .certificates-inner .btn{ width: 100%; }
+  .price-table th, .price-table td{ padding: 16px 16px; font-size: 15px; }
+  .price-table thead th{ padding: 14px 16px; font-size: 12px; }
+  .price-table td strong{ font-size: 17px; }
 }
