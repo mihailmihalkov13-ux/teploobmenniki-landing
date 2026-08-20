@@ -224,13 +224,13 @@ p{ color: var(--text-muted); }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center right;
+  object-position: 75% center;
 }
 .hero-bg-blur{
-  filter: blur(9px);
+  filter: blur(6px);
   transform: scale(1.05);
-  -webkit-mask-image: linear-gradient(to right, #000 0%, #000 55%, transparent 78%);
-  mask-image: linear-gradient(to right, #000 0%, #000 55%, transparent 78%);
+  -webkit-mask-image: linear-gradient(to right, #000 0%, #000 42%, transparent 62%);
+  mask-image: linear-gradient(to right, #000 0%, #000 42%, transparent 62%);
 }
 .hero::before{
   content: '';
@@ -239,9 +239,9 @@ p{ color: var(--text-muted); }
   z-index: 1;
   background: linear-gradient(to right,
     rgba(7,23,51,.88) 0%,
-    rgba(7,23,51,.78) 38%,
-    rgba(7,23,51,.35) 62%,
-    rgba(7,23,51,.08) 82%
+    rgba(7,23,51,.78) 32%,
+    rgba(7,23,51,.3) 52%,
+    rgba(7,23,51,.06) 70%
   );
 }
 
@@ -627,6 +627,7 @@ figure.photo figcaption{
 .map-embed{
   width: 100%;
   height: 460px;
+  object-fit: cover;
   border: 0;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow);
