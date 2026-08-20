@@ -6,6 +6,8 @@
 :root{
   --accent: #0057c2;
   --accent-dark: #003f8f;
+  --navy: #0b2447;
+  --navy-dark: #071733;
   --accent-light: #e8f0fc;
   --dark: #1b1b1b;
   --text: #232323;
@@ -96,10 +98,10 @@ p{ color: var(--text-muted); }
 .btn:active{ transform: translateY(1px); }
 
 .btn-primary{
-  background: var(--accent);
+  background: var(--navy);
   color: var(--white);
 }
-.btn-primary:hover{ background: var(--accent-dark); }
+.btn-primary:hover{ background: var(--navy-dark); }
 
 .btn-outline{
   background: transparent;
@@ -144,7 +146,7 @@ p{ color: var(--text-muted); }
   justify-content: center;
   width: 44px;
   height: 44px;
-  background: var(--accent);
+  background: var(--navy);
   color: var(--white);
   font-weight: 800;
   border-radius: var(--radius-sm);
@@ -304,7 +306,7 @@ figure.photo figcaption{
 
 
 .stats-bar{
-  background: var(--dark);
+  background: var(--accent);
 }
 .stats-grid{
   display: grid;
@@ -322,7 +324,7 @@ figure.photo figcaption{
 .stat-label{
   display: block;
   font-size: 13px;
-  color: #b7bcc6;
+  color: #dbe8fb;
   margin-top: 4px;
 }
 
