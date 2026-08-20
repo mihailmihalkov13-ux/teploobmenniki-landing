@@ -12,7 +12,7 @@
   --dark: #1b1b1b;
   --text: #232323;
   --text-muted: #6b6f76;
-  --bg-gray: #f5f6f9;
+  --bg-gray: #eef1f6;
   --bg-gray-2: #eef0f4;
   --white: #ffffff;
   --border: #e2e4e9;
@@ -60,8 +60,13 @@ p{ color: var(--text-muted); font-weight: 500; }
 
 .center{ text-align: center; margin-left: auto; margin-right: auto; }
 
-.section{ padding: 88px 0; }
+.section{ padding: 88px 0; border-top: 1px solid var(--border); }
 .section-gray{ background: var(--bg-gray); }
+.section-tint{
+  background: linear-gradient(180deg, var(--accent-light) 0%, #f4f8fe 100%);
+  border-top: 1px solid #d8e6fa;
+  border-bottom: 1px solid #d8e6fa;
+}
 
 .section-eyebrow{
   text-transform: uppercase;
@@ -539,7 +544,8 @@ figure.photo figcaption{
 .adv-card{
   padding: 30px 24px;
   border-radius: var(--radius-md);
-  background: var(--bg-gray);
+  background: var(--white);
+  box-shadow: var(--shadow);
   text-align: left;
 }
 .adv-icon{
