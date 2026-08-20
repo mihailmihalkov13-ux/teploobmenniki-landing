@@ -639,7 +639,6 @@ figure.photo figcaption{
 .map-embed{
   width: 100%;
   height: 460px;
-  object-fit: cover;
   border: 0;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow);
