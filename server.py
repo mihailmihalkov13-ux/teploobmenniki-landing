@@ -51,7 +51,7 @@ def submit_lead():
         return jsonify({"ok": False, "error": "Сервис временно недоступен"}), 500
 
     body_lines = [
-        "Новая заявка с сайта teploobmenniki-landing",
+        "Новая заявка с сайта Энерготерм",
         "",
         f"Имя: {name}",
         f"Телефон: {phone}",
