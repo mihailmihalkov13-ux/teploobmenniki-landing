@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (submitBtn) submitBtn.disabled = true;
       try {
-        const res = await fetch('/api/lead', {
+        const res = await fetch('/api-proxy.php', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)

@@ -29,6 +29,7 @@ def index():
 
 
 @app.route("/api/lead", methods=["POST"])
+@app.route("/api-proxy.php", methods=["POST"])
 def submit_lead():
     data = request.get_json(silent=True) or request.form
 
